@@ -3,9 +3,15 @@
 <head>
 <title>HERO-HB WAD-ALZAIN</title>
 <link rel="stylesheet" href="../style.css">
+<script src="password.js"></script>
 </head>
 <body>
 <script>
+
+if (!checkPassword()) {
+    throw new Error("Wrong Password");
+}
+
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
 var isPS4 = match !== null;
