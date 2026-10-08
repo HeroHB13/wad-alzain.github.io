@@ -5,23 +5,25 @@
 <link rel="stylesheet" href="../style.css">
 <script src="password.js"></script>
 </head>
-<body>
-<script>
 
+<body>
+
+<script>
+ 
 if (!checkPassword()) {
     throw new Error("Wrong Password");
 }
-
+ 
 var uaFull = navigator.userAgent;
 var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
 var isPS4 = match !== null;
 var fwVersion = isPS4 ? match[1] : "Unknown";
 var fwNum = parseFloat(fwVersion);
-
+ 
 function onScriptError() {
     msgs.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
 }
-
+ 
 if (!isPS4) {
     document.addEventListener("DOMContentLoaded", () => {
         msgs.innerHTML = "Only for PS4 with Firmware 5.05 and 7.00 to 13.52";
@@ -99,10 +101,32 @@ if (!isPS4) {
     }
 }
 </script>
+
+<!-- الصورة -->
+<img src="logo_hero.png" style="
+    display: block;
+    width: 35%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+">
+
 <h1>HERO-HB WAD-ALZAIN</h1>
 <hr>
 <br>
-<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.12... Please Wait</h1>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</h1>
+
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">
+Loading GoldHEN v2.4b18.12... Please Wait
+</h1>
+
+<h1 style="margin-top: 43px;">
+Special Thanks to:
+<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>
+ChendoChap
+<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>
+SiSTR0 Abc
+</h1>
+
 </body>
 </html>
